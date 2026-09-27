@@ -412,7 +412,7 @@
                 if (!response.ok) throw new Error('Network response was not ok');
                 
                 const data = await response.json();
-                renderAiResponse(typingId, data.reply, data.matched_sources);
+                renderAiResponse(typingId, data.response, []);
 
             } catch (error) {
                 console.error("Backend fetch failed, falling back to mock response.", error);
